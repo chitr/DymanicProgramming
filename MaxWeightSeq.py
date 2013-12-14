@@ -5,6 +5,11 @@ import copy
 max_weight_list={}
 #53 3 5 67 10 8 105
 def get_max_weight(data_graph,index):
+    """
+    Return max weight subsequence for given data graph/array and upto index
+    Time complexity  O(n)
+    Space complexcity O(n^2)
+    """
     print "INDEX  :: "+str(index)
     if index == -1:
         tmp_dict={0:[int('-1')]}
@@ -21,9 +26,11 @@ def get_max_weight(data_graph,index):
     
     print "INDEX : "+str(index)
     print max_weight_list
+    ###CASE 1 : say index element is not part of max weight sequence
     wt1=copy.deepcopy(max_weight_list[index-1].keys()[0])
     print "wt1   :"+str(wt1)
     print max_weight_list[0]
+    ###CASE 2 :say index element is part of max weight sequence 
     wt2=copy.deepcopy(int(max_weight_list[index-2].keys()[0] )) + copy.deepcopy(int(data_graph[index]))
     print "wt2  :"+str(wt2)
     
@@ -51,7 +58,7 @@ def get_max_weight(data_graph,index):
 if __name__ == "__main__":
     len=len(sys.argv)
     array=sys.argv[1:]
- 
+    #INPUT ARRAY 
     print "======================================="
  
     for i in range(-1,int(len-1)):
