@@ -1,4 +1,4 @@
 DymanicProgramming-Practice
 ===========================
 
-Adding collection of Algo-praogrammes
+Adding collection of few practise problems
